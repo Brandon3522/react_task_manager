@@ -5,7 +5,7 @@ import { useState } from "react"; // Hook for state
 import React from "react";
 
 function App() {
-    const [ showAddTask, setShowAddTask ] = useState(true);
+    const [showAddTask, setShowAddTask] = useState(true);
     // Keeps the state of tasks within the component
     const [tasks, setTasks] = useState([
         {
@@ -50,9 +50,7 @@ function App() {
     return (
         <div className="container">
             <h2>
-                <Header
-                    onAdd={() => setShowAddTask(!showAddTask)}
-                />
+                <Header onAdd={() => setShowAddTask(!showAddTask)} />
             </h2>
             {showAddTask && <AddTask onAdd={addTask} />}
             {tasks.length > 0 ? (
